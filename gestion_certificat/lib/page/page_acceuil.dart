@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gestion_certificat/page/admin/page_dashboard.dart';
 import 'dart:async';
 
 import './auth/page_login.dart';  // ajuste le chemin si besoin
@@ -20,7 +21,7 @@ class _PageAcceuilState extends State<PageAcceuil> {
     Timer(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) =>  LoginPage()),
+        MaterialPageRoute(builder: (context) =>  PageDashboard()),
       );
     });
   }
