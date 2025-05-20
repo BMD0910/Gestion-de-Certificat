@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gestion_certificat/page/admin/page_gestion_certificat.dart';
+import 'package:gestion_certificat/page/admin/page_gestion_habitant.dart';
 import 'package:gestion_certificat/page/admin/page_gestion_maison.dart';
 import 'package:gestion_certificat/page/admin/page_gestion_quartier.dart';
 
@@ -102,7 +103,10 @@ class _PageDashboardState extends State<PageDashboard> {
                       icon: Icons.person,
                       value: "760",
                       color: AppColors.cardBackground1,
-                      onTap: () => print("Habitants cliqué"),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) =>  PageGestionHabitant()),
+                      ),
                       width: cardWidth,
                     ),
                   ],
