@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gestion_certificat/page/admin/page_gestion_certificat.dart';
 import 'package:gestion_certificat/page/admin/page_gestion_maison.dart';
 import 'package:gestion_certificat/page/admin/page_gestion_quartier.dart';
-import 'package:gestion_certificat/widgets/appbar.dart';
+
+import 'package:gestion_certificat/widgets/appbar2.dart';
 import 'package:gestion_certificat/widgets/card1_certif_Admin.dart';
 
 
@@ -33,7 +34,7 @@ class _PageDashboardState extends State<PageDashboard> {
 
   return Scaffold(
     backgroundColor: AppColors.secondary,
-    appBar: MyCustomAppbar(nomUtilisateur: "Baye Mor Diouf", profilUtilisateur: "administrateur",),
+    appBar: MyAppbar1(nomUtilisateur: "Baye Mor Diouf", profilUtilisateur: "administrateur",),
     body:SingleChildScrollView(
       child:  Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -58,6 +59,7 @@ class _PageDashboardState extends State<PageDashboard> {
                   spacing: 16,
                   runSpacing: 16,
                   children: [
+                    
                     _buildCard(
                       context,
                       title: "Quartiers",
@@ -125,6 +127,18 @@ class _PageDashboardState extends State<PageDashboard> {
 
             child: Column(
               children: [
+                SizedBox(height: 10),
+                Text(
+                  "Liste des Demandes",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: AppColors.textPrimary,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                SizedBox(height: 10),
+
                 Card1CertifAdmin(title1: "Baye mor Diouf", title2: "NCI : 091020000915", subtitle: "09-10-2000  12:30") ,
                 Card1CertifAdmin(title1: "Baye mor Diouf", title2: "NCI : 091020000915", subtitle: "09-10-2000  12:30") ,
                 Card1CertifAdmin(title1: "Baye mor Diouf", title2: "NCI : 091020000915", subtitle: "09-10-2000  12:30") ,

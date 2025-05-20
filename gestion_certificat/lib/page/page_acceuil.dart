@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gestion_certificat/page/admin/page_dashboard.dart';
 import 'dart:async';
 
-import './auth/page_login.dart';  // ajuste le chemin si besoin
 import '../../constants/app_colors.dart';
 
 class PageAcceuil extends StatefulWidget {

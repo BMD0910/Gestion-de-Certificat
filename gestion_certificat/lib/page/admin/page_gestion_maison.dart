@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:gestion_certificat/widgets/appbar.dart';
+
+import 'package:gestion_certificat/widgets/appbar3.dart';
 import 'package:gestion_certificat/widgets/card1_gestion_maison.dart';
-import 'package:gestion_certificat/widgets/card1_gestion_quartier.dart';
+
 
 
 
@@ -30,7 +31,7 @@ class _PageGestionMaisonState extends State<PageGestionMaison> {
 
       //
 
-      appBar: MyCustomAppbar(nomUtilisateur: "Baye Mor Diouf", profilUtilisateur: "administrateur",),
+      appBar: MyAppbar2(nomPage: "Maison",),
 
       //
 
@@ -115,6 +116,7 @@ Widget Formulaire() {
     final formKey = GlobalKey<FormState>();
     final numController = TextEditingController();
     final nomController = TextEditingController();
+    final propietaireController = TextEditingController();
     final descController = TextEditingController();
    
 
@@ -126,6 +128,7 @@ Widget Formulaire() {
           champsQuartier(
             numController: numController,
             nomController: nomController,
+            propietaireController: propietaireController,
             descController: descController,
           ),
           const SizedBox(height: 24),
@@ -134,6 +137,7 @@ Widget Formulaire() {
               if (formKey.currentState!.validate()) {
                 print("Numéro : ${numController.text}");
                 print("Nom : ${nomController.text}");
+                print("Propriétaire : ${propietaireController.text}");
                 print("Description : ${descController.text}");
                 // Tu peux maintenant envoyer les données
               }
@@ -149,6 +153,7 @@ Widget Formulaire() {
   Widget champsQuartier({
     required TextEditingController numController,
     required TextEditingController nomController,
+    required TextEditingController propietaireController,
     required TextEditingController descController,
 
   }) {
@@ -236,6 +241,48 @@ Widget Formulaire() {
           validator: (value) {
             if (value == null || value.isEmpty) {
               return 'Le nom du quartier est obligatoire';
+            }
+            return null;
+          },
+        ),
+        const SizedBox(height: 16),
+
+        TextFormField(
+          controller: propietaireController,
+          decoration: InputDecoration(
+            labelText: "NCI du Propriétaire",
+            hintText: "Ex : 1056540522809",
+            
+            // bordure normale
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: borderColor),
+              borderRadius: BorderRadius.circular(7),
+            ),
+
+            // bordure quand c'est focus (sélectionné)
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: borderColor, width: 2),
+              borderRadius: BorderRadius.circular(7),
+            ),
+
+
+            // bordure quand une erreur est présente
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(7),
+              borderSide: const BorderSide(color: AppColors.buttonDelete, width: 1.5),
+            ),
+
+            // bordure quand focus ET erreur
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(7),
+              borderSide: const BorderSide(color: AppColors.buttonDelete, width: 2),
+            ),
+
+            prefixIcon: const Icon(Icons.person, color: borderColor),
+          ),
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Le NCI du propriétaire est obligatoire';
             }
             return null;
           },

@@ -67,7 +67,7 @@ class _MyCustomAppbarState extends State<MyCustomAppbar> {
             color:  AppColors.background2,
             child: 
               Text(
-                widget.profilUtilisateur!,
+                widget.profilUtilisateur,
                 style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic, color: Colors.white),
                 textAlign: TextAlign.center,
               ),

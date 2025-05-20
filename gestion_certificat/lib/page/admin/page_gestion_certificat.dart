@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:gestion_certificat/widgets/appbar.dart';
-import 'package:gestion_certificat/widgets/card1_gestion_quartier.dart';
+import 'package:gestion_certificat/widgets/appbar3.dart';
 import 'package:gestion_certificat/widgets/card2_certif_Admin.dart';
 
-
-
 import '../../constants/app_colors.dart';
+
+
 
 class PageGestionCertificat extends StatefulWidget {
   const PageGestionCertificat({super.key});
@@ -30,7 +29,8 @@ class _PageGestionCertificatState extends State<PageGestionCertificat> {
 
       //
 
-      appBar: MyCustomAppbar(nomUtilisateur: "Baye Mor Diouf", profilUtilisateur: "administrateur",),
+      appBar: MyAppbar2(nomPage: "Certificat",),
+      
 
       //
 

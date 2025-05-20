@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:gestion_certificat/widgets/appbar.dart';
+
+import 'package:gestion_certificat/widgets/appbar3.dart';
 import 'package:gestion_certificat/widgets/card1_gestion_quartier.dart';
 
 
@@ -29,7 +30,7 @@ class _PageGestionQuartierState extends State<PageGestionQuartier> {
 
       //
 
-      appBar: MyCustomAppbar(nomUtilisateur: "Baye Mor Diouf", profilUtilisateur: "administrateur",),
+      appBar: MyAppbar2(nomPage: "Quartier",),
 
       //
 
@@ -67,6 +68,7 @@ class _PageGestionQuartierState extends State<PageGestionQuartier> {
               alignment: Alignment.center,
               // height: 800,
               
+              
               padding: const EdgeInsets.all(10),
 
               decoration: BoxDecoration( 
@@ -78,6 +80,7 @@ class _PageGestionQuartierState extends State<PageGestionQuartier> {
               child: Column(
                 children: [
                   const SizedBox(height: 10),
+                  
                   Text(
                     "Liste des quartiers",
                     textAlign: TextAlign.left,
