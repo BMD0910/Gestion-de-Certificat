@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1099331486837",
+    "project_id": "gestioncertificat-ce8fc",
+    "storage_bucket": "gestioncertificat-ce8fc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099331486837:android:528e1ece99aff2fc6fe43c",
+        "android_client_info": {
+          "package_name": "com.example.gestioncertificat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUS9N2X4lq91oZUACEr_-u96kzxLBeYPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
