@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "Gestion": "gestion-4dda7",
+    "com.example.gestioncertificat": "gestion-4dda7",
+    "gestioncertificat": "gestion-4dda7",
+    "default": "gestion-4dda7"
+  },
+  "targets": {},
+  "etags": {}
+}
